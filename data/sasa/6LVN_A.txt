@@ -1,0 +1,36 @@
+# Residues in /Users/jaydeep/WorkDir/Projects/Corona/StructureAnalysis/Notebooks/V3/data/PDB_subfiles/6LVN_A.pdb
+SEQ A    2  ILE :  157.54
+SEQ A    3  SER :   85.35
+SEQ A    4  GLY :   52.14
+SEQ A    5  ILE :  108.46
+SEQ A    6  ASN :   81.61
+SEQ A    7  ALA :   48.80
+SEQ A    8  SER :   55.78
+SEQ A    9  VAL :   95.54
+SEQ A   10  VAL :   90.55
+SEQ A   11  ASN :   69.52
+SEQ A   12  ILE :  106.82
+SEQ A   13  GLN :   88.51
+SEQ A   14  LYS :  121.92
+SEQ A   15  GLU :   88.45
+SEQ A   16  ILE :   77.81
+SEQ A   17  ASP :   76.28
+SEQ A   18  ARG :  148.19
+SEQ A   19  LEU :  121.56
+SEQ A   20  ASN :   73.63
+SEQ A   21  GLU :   96.03
+SEQ A   22  VAL :   73.24
+SEQ A   23  ALA :   59.48
+SEQ A   24  LYS :  133.80
+SEQ A   25  ASN :   88.69
+SEQ A   26  LEU :  113.24
+SEQ A   27  ASN :   80.43
+SEQ A   28  GLU :  109.13
+SEQ A   29  SER :   57.14
+SEQ A   30  LEU :  100.03
+SEQ A   31  ILE :   80.11
+SEQ A   32  ASP :   94.73
+SEQ A   33  LEU :  143.22
+SEQ A   34  GLN :  144.72
+SEQ A   35  GLU :  166.06
+

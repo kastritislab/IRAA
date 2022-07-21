@@ -1,0 +1,23 @@
+# Residues in /Users/jaydeep/WorkDir/Projects/Corona/StructureAnalysis/Notebooks/V3/data/PDB_subfiles/7LC8_A.pdb
+SEQ A 1217  TRP :  249.53
+SEQ A 1218  LEU :  143.69
+SEQ A 1219  GLY :   57.72
+SEQ A 1220  PHE :  142.09
+SEQ A 1221  ILE :  104.26
+SEQ A 1222  ALA :   60.21
+SEQ A 1223  GLY :   36.34
+SEQ A 1224  LEU :   93.99
+SEQ A 1225  ILE :   95.39
+SEQ A 1226  ALA :   50.04
+SEQ A 1227  ILE :  112.53
+SEQ A 1228  VAL :   79.72
+SEQ A 1229  LEU :  104.32
+SEQ A 1230  VAL :   86.12
+SEQ A 1231  THR :   78.55
+SEQ A 1232  ILE :  101.19
+SEQ A 1233  LEU :  120.09
+SEQ A 1234  LEU :  121.36
+SEQ A 1235  SER :   90.96
+SEQ A 1236  SER :   89.09
+SEQ A 1237  THR :  160.56
+
