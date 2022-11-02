@@ -5,8 +5,7 @@ Multiple 3D structures of complex [AB] in the bound state, as well as multiple 3
 
 *A GUI within ipynb*
 
-![A GUI within ipynb](https://github.com/kastritislab/IRAA/blob/main/Screenshot_IRAA_GUI_within_notebook.png)
-
+![A GUI within ipynb](https://github.com/kastritislab/IRAA/blob/main/screen_shot_v2.gif)
 
 Github repos is structure as below:
 
@@ -29,3 +28,6 @@ Dependencies:
 - freesasa
 
 You need to install freesasa and make sure it is added to the path, and available in your python run session.
+
+![A GUI within ipynb](https://github.com/kastritislab/IRAA/blob/main/Screenshot_IRAA_GUI_within_notebook.png)
+
