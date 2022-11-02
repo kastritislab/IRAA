@@ -5,7 +5,7 @@ Multiple 3D structures of complex [AB] in the bound state, as well as multiple 3
 
 *A GUI within ipynb*
 
-![A GUI within ipynb](https://github.com/kastritislab/IRAA/blob/main/IRAA_GUI_within_notebook.png)
+![A GUI within ipynb](https://github.com/kastritislab/IRAA/blob/main/Screenshot_IRAA_GUI_within_notebook.png)
 
 
 Github repos is structure as below:
