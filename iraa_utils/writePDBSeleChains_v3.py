@@ -6,33 +6,37 @@ Created on Tue Nov 30 12:55:02 2021
 """
 
 from Bio.PDB import Select, PDBIO
-#from Bio.PDB.PDBParser import PDBParser
+from Bio.PDB.PDBParser import PDBParser
 from Bio.PDB.MMCIFParser import MMCIFParser
 import os
 
-cif_datadir = os.path.abspath('../IRAA/data/files.rcsb.org/download')
-base_project_path = os.path.abspath('../IRAA/data/')
+base_project_path = os.path.abspath('../data/')
+cif_datadir = os.path.abspath('../data/PDB_data')
 
 class Chain_Atom_Select(Select):
     def __init__(self, chains):
         self.chains = chains
-
+        
     def accept_chain(self, chain):
         if chain.get_id() in self.chains:
             return 1
-        else:
+        else:          
             return 0
-
+        
     def accept_residue(self, residue):
         if residue.get_id()[0] == ' ':
             return 1
-        else:
+        else:          
             return 0
 
-def writePDBSeleChains( file_id, list_of_chains=['A'] ):
+def writePDBSeleChains( filetype='cif', file_id=None, list_of_chains=['A'] ):
     path_to_out_dir = os.path.join(base_project_path, "PDB_subfiles")
-    in_filename = os.path.join(cif_datadir, file_id + '.cif')
-    p = MMCIFParser(QUIET=True)
+    if filetype=='cif':
+        in_filename = os.path.join(cif_datadir, file_id + '.cif')
+        p = MMCIFParser(QUIET=True)
+    elif filetype=='pdb':
+        in_filename = os.path.join(cif_datadir, file_id + '.pdb')
+        p = PDBParser(QUIET=True)
     if len(list_of_chains)> 1:
         fout_name = file_id + '_' +'_'.join(list_of_chains) + '.pdb'
         #save fileid_A_B

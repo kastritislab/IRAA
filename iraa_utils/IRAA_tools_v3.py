@@ -30,11 +30,11 @@ sns.set_theme(style="white", palette=None)
 #=======================================================================================================================
 #=============== SET FOLDER PATHS RELATIVE TO LOCATION OF JUPYTER NOTEBOOK =============================================
 base_dir = os.path.abspath('')
-ov_dir = os.path.abspath('../IRAA/jpnb_overview_files/')
-cif_datadir = os.path.abspath('../IRAA/data/files.rcsb.org/download/')
-sasa_dir = os.path.abspath('../IRAA/data/sasa/')
-path_to_ref_seqs = os.path.abspath('../IRAA/data/RefSequences/')
-fig_dir = os.path.abspath('../IRAA/figures/')
+ov_dir = os.path.abspath('../overview_files/')
+cif_datadir = os.path.abspath('../data/PDB_data/')
+sasa_dir = os.path.abspath('../data/sasa/')
+path_to_ref_seqs = os.path.abspath('../RefSequences/')
+fig_dir = os.path.abspath('../figures/')
 #=======================================================================================================================
 amino_acids_dict =  {
         'Gly': 'G','Ala': 'A','Val': 'V','Cys': 'C','Trp': 'W',
@@ -318,7 +318,7 @@ def get_list_of_structures(fname_A = "List_of_structures_A.txt", fname_B = "List
     structures_of_AB_fid_ch_split = list(set(structures_of_AB_fid_ch_split))
     return structures_of_A_fid_ch, structures_of_B_fid_ch, structures_of_AB_fid_ch, structures_of_AB_fid_ch_split
 
-def gen_pbd_files_per_chain(list_of_fid_ch):
+def gen_pbd_files_per_chain(list_of_fid_ch=None, filetype='cif'):
     '''
     list contains fid_ch. E.g. 6M17_A, 6M17_A_B etc.
     Split and generate PDB file per chain in every structure. E.g. 6M17 -> 6M17_A, 6M17_B etc.
@@ -327,13 +327,13 @@ def gen_pbd_files_per_chain(list_of_fid_ch):
     #for p_list in [structures_of_A_fid_ch, structures_of_B_fid_ch, structures_of_AB_fid_ch, structures_of_AB_fid_ch_split]:
     for file_id_ch in tqdm(list_of_fid_ch):
         file_id, chains = file_id_ch.split('_')[0], file_id_ch.split('_')[1:]
-        pdbwriter.writePDBSeleChains(file_id, list(chains))
+        pdbwriter.writePDBSeleChains(filetype=filetype, file_id=file_id, list_of_chains=list(chains))
 
-def gen_sasa_files(input_folder=None,output_folder=None):
+def gen_sasa_files(input_folder=None,output_folder=None, method='L&R', probe_radius=1.4):
     '''
     Calculate ASA of all PDB files [A], [B], [AB].
     '''
-    sasa.genSASAFiles(input_folder=input_folder, output_folder=output_folder)
+    sasa.genSASAFiles(input_folder=input_folder, output_folder=output_folder, method=method, probe_radius=probe_radius)
 
 def read_sasa_file_as_df(file_id_ch):
     '''
@@ -696,7 +696,7 @@ def plot_compare_MC_vs_Bnd_bsa_per_resi(df_MC_vs_bnd_bsa_A_or_B, df_MC_vs_bnd_bs
     ax0.grid(axis='y')
     ax0.set_ylabel("")
     ax0.set_xlabel("BSA ($\AA^{2}$)")
-    ax0.set_xlim((0, 150))
+    ax0.set_xlim((-20, 150))
     ax0.legend(title=None)
     #==== draw p-values
     colorbar_ticks = [0.001, 0.005, 0.01] #[0, .01, .05, .1]
@@ -738,3 +738,4 @@ def plot_compare_MC_vs_Bnd_bsa_total_over_intf_resi(df_comp_bsa_total, savefig=F
         if filename is None:
             filename = "compare_bsa_total_MC_vs_Bnd.eps"
         plt.savefig(os.path.join(fig_dir, filename), dpi=1200, transparent=True)
+
