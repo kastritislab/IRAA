@@ -1,7 +1,6 @@
 # IRAA: A statistical tool for investigating a protein-protein interaction interface from multiple structures
 
-https://doi.org/10.1002/pro.4523
-![See the full article here.](https://doi.org/10.1002/pro.4523)
+![See the full article here.](https://doi.org/10.1002/pro.4523) (https://doi.org/10.1002/pro.4523)
 
 
 It is a tool to assess protein interface of a any complex [AB] with components [A] and [B].
